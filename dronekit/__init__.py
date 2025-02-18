@@ -49,6 +49,7 @@ from pymavlink.dialects.v10 import ardupilotmega
 
 from dronekit.util import ErrprinterHandler
 
+__version__ = "2.9.2"
 
 class APIException(Exception):
     """

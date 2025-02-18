@@ -33,13 +33,7 @@ A number of other useful classes and methods are listed below.
 """
 
 import sys
-import collections
-
-# Python3.10 removed MutableMapping from collections:
-if sys.version_info.major == 3 and sys.version_info.minor >= 10:
-    from collections.abc import MutableMapping
-else:
-    from collections import MutableMapping
+from collections.abc import MutableMapping # edit to align with Python 3.12
 
 import copy
 import logging
@@ -242,7 +236,7 @@ class Wind(object):
         self.wind_direction = wind_direction
         self.wind_speed = wind_speed
         self.wind_speed_z = wind_speed_z
-    
+
     def __str__(self):
         return "Wind: wind direction: {}, wind speed: {}, wind speed z: {}".format(self.wind_direction, self.wind_speed, self.wind_speed_z)
 
